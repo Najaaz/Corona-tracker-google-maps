@@ -3,16 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styleSheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <meta name="author" content="Najaaz Nabhan">
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <link rel="styleSheet" href="css/style.css">
+    <link rel="icon" href="https://i.pinimg.com/originals/f0/e1/8a/f0e18a5eec5f034b4bf92ea25ccc7d48.png">
+    
     <title>Covid-19 tracker</title>
 </head>
 <body>
-    
+    <h1 class="title">C<i class="fas fa-virus"></i>VID TRACKER</h1>
 
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" name="search" placeholder="Enter country name" id="country-code">
+            <i class="fas fa-search" id="myBtn"></i>
+        </div>
+    </div>
 
+    <div class="country-container">
+        <div class="country-container-list">
+            <div class="info-list">
+                <div class="info-title">
+                    <div class="info-title-name">USA</div>
+                </div>
+                <div class="info-stats">
+                    <div class="info-confirmed">
+                        <i class="fas fa-virus"></i>
+                        1,768,346
+                    </div>
+                    <div class="info-recovered">
+                        <i class="fas fa-thumbs-up"></i>
+                        498,720
+                    </div>
+                    <div class="info-death">
+                        <i class="fas fa-skull"></i>
+                        103,330
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id = "map"></div>
+
+<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYsw87jZsF8LJmftvhEJAVu8WtBU4O8C8&callback=initMap"></script>-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh15L6ZQVrZVsMjwAhb_3-X6bbgpSGtQk&callback=initMap"></script>
 <script src="js/info.js"></script>
 <script src="js/index.js"></script>
 </body>

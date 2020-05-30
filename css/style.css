@@ -1,0 +1,147 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+/* ---Styling for a desktop--- */
+@media (min-width: 900px) {
+  .title {
+    position: absolute;
+    z-index: 5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin: 60px;
+  }
+  .search-container {
+    position: absolute;
+    z-index: 5;
+    width: 300px;
+    height: 45px;
+    background-color: #CCFF99;
+    border-radius: 30px;
+    top: 140px;
+    left: 60px;
+  }
+  .search-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 12px;
+    padding-right: 10px;
+    height: 100%;
+  }
+  .search-bar input {
+    width: 100%;
+    font-size: 21px;
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+  .search-bar ::-webkit-input-placeholder {
+    color: #257225;
+  }
+  .search-bar :-ms-input-placeholder {
+    color: #257225;
+  }
+  .search-bar ::-ms-input-placeholder {
+    color: #257225;
+  }
+  .search-bar ::placeholder {
+    color: #257225;
+  }
+  .search-bar i {
+    color: #257225;
+    font-size: 23px;
+  }
+  .country-container {
+    position: absolute;
+    z-index: 10;
+    background: #CCFF99;
+    width: 300px;
+    top: 200px;
+    left: 60px;
+    border-radius: 30px;
+    bottom: 20px;
+  }
+  .country-container-list {
+    margin: 15px;
+    border-bottom: 1px solid #257225;
+  }
+  .info-list {
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .info-list:hover {
+    background-color: seagreen;
+  }
+  .info-title {
+    font-size: 25px;
+    font-family: Arial;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .info-confirmed, .info-recovered, .info-death {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .info-confirmed i, .info-recovered i, .info-death i {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .info-death, .info-recovered, .info-confirmed {
+    padding-bottom: 5px;
+  }
+  .info-confirmed, .info-recovered {
+    padding-right: 10px;
+  }
+  .info-confirmed i {
+    background: orange;
+  }
+  .info-recovered i {
+    background: #84ca1c;
+  }
+  .info-death i {
+    background: red;
+  }
+  .info-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/*---Styling for a mobile---*/
+@media (max-width: 899px) {
+  .title {
+    position: absolute;
+    z-index: 5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
