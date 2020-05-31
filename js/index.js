@@ -154,4 +154,7 @@ function commafy( num ) {
 
 function resetbtn(){
     infoWindow.close()
+    setContent(statistics)
+    var search_country = document.querySelector(".search-bar")
+    search_country.reset()
 }
