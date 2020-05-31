@@ -77,8 +77,8 @@ body {
   .country-container {
     position: absolute;
     z-index: 10;
-    background-image: -webkit-gradient(linear, left top, right top, from(#CCFF99), color-stop(rgba(204, 255, 153, 0.671)), to(transparent));
-    background-image: linear-gradient(to right, #CCFF99, rgba(204, 255, 153, 0.671), transparent);
+    background-image: -webkit-gradient(linear, left top, right top, from(#CCFF99), to(rgba(204, 255, 153, 0.671)));
+    background-image: linear-gradient(to right, #CCFF99, rgba(204, 255, 153, 0.671));
     width: 300px;
     top: 200px;
     left: 60px;

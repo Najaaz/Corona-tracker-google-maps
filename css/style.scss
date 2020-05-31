@@ -20,7 +20,7 @@ body{
     
     h5{
         padding: 2px;
-        background: white;
+        background: white; 
     }
 }
 
@@ -74,7 +74,7 @@ body{
     .country-container{
         position: absolute;
         z-index: 10;
-        background-image: linear-gradient(to right , $light_green ,$light_green_transparent, transparent);
+        background-image: linear-gradient(to right , $light_green ,$light_green_transparent);
         width: 300px;
         top: 200px;
         left: 60px;
