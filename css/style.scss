@@ -1,5 +1,6 @@
 $dark_green : rgb(37, 114, 37);
 $light_green : #CCFF99;
+$light_green_transparent: rgba(204, 255, 153, 0.671);
 
 body{
     padding: 0;
@@ -19,6 +20,7 @@ body{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 50px;
         margin: 60px;
+        color: rgba(17, 17, 17, 0.7);
     }
 
     .search-container{
@@ -26,7 +28,7 @@ body{
         z-index: 5;
         width: 300px;
         height: 45px;
-        background-color: $light_green;
+        background-color: $light_green_transparent;
         border-radius: 30px;
         top: 140px;
         left: 60px;
@@ -60,7 +62,7 @@ body{
     .country-container{
         position: absolute;
         z-index: 10;
-        background-image: linear-gradient(to right , $light_green , transparent);
+        background-image: linear-gradient(to right , $light_green ,$light_green_transparent, transparent);
         width: 300px;
         top: 200px;
         left: 60px;
@@ -142,6 +144,47 @@ body{
     .info-stats{
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .window{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .window-info-title{
+        font-size: 23px;
+        font-weight: bold;
+        margin-bottom:5px;
+    }
+
+    .window-stats-title{
+        font-size: 15px;
+
+        div{
+            margin-bottom: 3px;
+            padding-left: 10px;
+            padding-right: 12px;
+            height: 20px;
+            flex-grow: 1;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .window-stats-infected{
+            background: orange;
+        }
+        .window-stats-recovered{
+            background: greenyellow;
+        }
+        .window-stats-death{
+            background: red;
+        }
+        .window-stats-critical{
+            background: rgb(42, 212, 190);
+        }
+        .window-stats-active{
+            background: rgb(42, 212, 190);
+        }
     }
 }
 

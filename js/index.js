@@ -25,8 +25,23 @@ function initMap() {
 }
 
 
-function createMarker(latlng, name, death , countryCode) {
-    var html = `${name} <br> Death: ${death}`;
+function createMarker(latlng, name, death, countryCode, infected , recovered ,active , critical) {
+    var html = `
+        <div class="window">
+            <div class="window-info">
+                <div class="window-info-title">
+                    <div class="window-title">${name}</div>
+                </div>
+                <div class = "window-stats-title">
+                    <div class="window-stats-infected">Infected: ${infected}</div>
+                    <div class="window-stats-recovered">Recovered: ${recovered}</div>
+                    <div class="window-stats-death">Dead: ${death}</div>                    
+                    <div class="window-stats-active">Active cases: ${active}</div>
+                    <div class="window-stats-critical">Crtitical cases: ${critical}</div>                    
+                </div>
+            </div>
+        </div>                    
+    `;
     var marker = new google.maps.Marker({
         map: map,
         position: latlng,
@@ -49,9 +64,13 @@ function showMarkers(){
             country.lng,)
 
         var name = country.country
-        var death = country.totalDeaths
+        var death = commafy(country.totalDeaths)
         var countryCode = country.countryCode
-        createMarker(latlng , name , death , countryCode)
+        var infected = commafy(country.totalConfirmed)
+        var recovered = commafy(country.totalRecovered)
+        var active = commafy(country.activeCases)
+        var critical = commafy(country.totalCritical)
+        createMarker(latlng , name , death , countryCode, infected , recovered ,active , critical)
     })
 }
 
@@ -67,15 +86,15 @@ function setContent(statistic){
                 <div class="info-stats">
                     <div class="info-confirmed">
                         <i class="fas fa-virus"></i>
-                        ${country.totalConfirmed}
+                        ${commafy(country.totalConfirmed)}
                     </div>
                     <div class="info-recovered">
                         <i class="fas fa-thumbs-up"></i>
-                        ${country.totalRecovered}
+                        ${commafy(country.totalRecovered)}
                     </div>
                     <div class="info-death">
                         <i class="fas fa-skull"></i>
-                        ${country.totalDeaths}
+                        ${commafy(country.totalDeaths)}
                     </div>
                 </div>
             </div>
@@ -119,5 +138,17 @@ function setContentListener(){
             google.maps.event.trigger(markers[index] , "click")
         })
     })
+}
+
+
+function commafy( num ) {
+    var str = num.toString().split('.');
+    if (str[0].length >= 4) {
+        str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+    }
+    if (str[1] && str[1].length >= 5) {
+        str[1] = str[1].replace(/(\d{3})/g, '$1 ');
+    }
+    return str.join('.');
 }
 

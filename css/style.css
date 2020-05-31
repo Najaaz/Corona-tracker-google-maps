@@ -16,13 +16,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     margin: 60px;
+    color: rgba(17, 17, 17, 0.7);
   }
   .search-container {
     position: absolute;
     z-index: 5;
     width: 300px;
     height: 45px;
-    background-color: #CCFF99;
+    background-color: rgba(204, 255, 153, 0.671);
     border-radius: 30px;
     top: 140px;
     left: 60px;
@@ -64,8 +65,8 @@ body {
   .country-container {
     position: absolute;
     z-index: 10;
-    background-image: -webkit-gradient(linear, left top, right top, from(#CCFF99), to(transparent));
-    background-image: linear-gradient(to right, #CCFF99, transparent);
+    background-image: -webkit-gradient(linear, left top, right top, from(#CCFF99), color-stop(rgba(204, 255, 153, 0.671)), to(transparent));
+    background-image: linear-gradient(to right, #CCFF99, rgba(204, 255, 153, 0.671), transparent);
     width: 300px;
     top: 200px;
     left: 60px;
@@ -146,6 +147,44 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .window {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .window-info-title {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .window-stats-title {
+    font-size: 15px;
+  }
+  .window-stats-title div {
+    margin-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 12px;
+    height: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  .window-stats-title .window-stats-infected {
+    background: orange;
+  }
+  .window-stats-title .window-stats-recovered {
+    background: greenyellow;
+  }
+  .window-stats-title .window-stats-death {
+    background: red;
+  }
+  .window-stats-title .window-stats-critical {
+    background: #2ad4be;
+  }
+  .window-stats-title .window-stats-active {
+    background: #2ad4be;
   }
 }
 
