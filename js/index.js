@@ -123,7 +123,7 @@ function searchCountry(){
 
     if (found){
         setContent(found)
-        console.log(found)
+        
     }else{
         console.log("NOT FOUND")
     }
@@ -132,7 +132,6 @@ function searchCountry(){
 function setContentListener(){
     infoWindow.close()
     var selectedContent = document.querySelectorAll(".info")
-    console.log(selectedContent)
     selectedContent.forEach(function(elem,index){
         elem.addEventListener("click" , function(){
             google.maps.event.trigger(markers[index] , "click")
