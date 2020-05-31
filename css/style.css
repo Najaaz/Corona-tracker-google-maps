@@ -64,16 +64,30 @@ body {
   .country-container {
     position: absolute;
     z-index: 10;
-    background: #CCFF99;
+    background-image: -webkit-gradient(linear, left top, right top, from(#CCFF99), to(transparent));
+    background-image: linear-gradient(to right, #CCFF99, transparent);
     width: 300px;
     top: 200px;
     left: 60px;
     border-radius: 30px;
     bottom: 20px;
+    overflow-y: scroll;
+    direction: rtl;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: slategrey;
+    border-radius: 20px;
   }
   .country-container-list {
     margin: 15px;
+  }
+  .info {
     border-bottom: 1px solid #257225;
+    margin-top: 5px;
+    direction: ltr;
   }
   .info-list {
     padding: 5px;

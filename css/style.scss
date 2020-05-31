@@ -60,17 +60,33 @@ body{
     .country-container{
         position: absolute;
         z-index: 10;
-        background: $light_green;
+        background-image: linear-gradient(to right , $light_green , transparent);
         width: 300px;
         top: 200px;
         left: 60px;
         border-radius: 30px;
-        bottom: 20px;        
+        bottom: 20px;  
+        overflow-y: scroll; 
+        direction: rtl;     
+    }
+
+    ::-webkit-scrollbar{
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: slategrey;
+        border-radius: 20px;
     }
 
     .country-container-list{
         margin: 15px;
+    }
+
+    .info{
         border-bottom: 1px solid $dark_green;
+        margin-top: 5px;
+        direction: ltr;
     }
 
     .info-list{
