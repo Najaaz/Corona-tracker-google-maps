@@ -12,6 +12,18 @@ body{
     height: 100vh;
 }
 
+.copyright-container{
+    position: absolute;
+    z-index: 5;
+    right: 5px;
+    bottom: 5px;
+    
+    h5{
+        padding: 2px;
+        background: white;
+    }
+}
+
 /* ---Styling for a desktop--- */
 @media (min-width:900px){
     .title{
