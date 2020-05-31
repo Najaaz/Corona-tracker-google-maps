@@ -10,13 +10,15 @@ body{
 #map{
     width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .copyright-container{
     position: absolute;
     z-index: 5;
     right: 5px;
-    bottom: 5px;
+    bottom: 0px;
     
     h5{
         padding: 2px;
@@ -26,24 +28,25 @@ body{
 
 /* ---Styling for a desktop--- */
 @media (min-width:900px){
+    .cont{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+
     .title{
-        position: absolute;
-        z-index: 5;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 50px;
-        margin: 60px;
+        margin-top: 40px;
         color: rgba(17, 17, 17, 0.7);
     }
 
     .search-container{
-        position: absolute;
-        z-index: 5;
         width: 300px;
         height: 45px;
         background-color: $light_green_transparent;
         border-radius: 30px;
-        top: 140px;
-        left: 60px;
+        margin-bottom: 10px;
     }
 
     .search-bar{
@@ -72,16 +75,12 @@ body{
     }
 
     .country-container{
-        position: absolute;
-        z-index: 10;
         background-image: linear-gradient(to right , $light_green ,$light_green_transparent);
         width: 300px;
-        top: 200px;
-        left: 60px;
+        height: 60vh;
         border-radius: 30px;
         bottom: 20px;  
-        overflow-y: scroll; 
-        direction: rtl;     
+        overflow-y: scroll;     
     }
 
     ::-webkit-scrollbar{
@@ -89,7 +88,7 @@ body{
     }
 
     ::-webkit-scrollbar-thumb{
-        background: slategrey;
+        background: $dark_green;
         border-radius: 20px;
     }
 
@@ -100,7 +99,6 @@ body{
     .info{
         border-bottom: 1px solid $dark_green;
         margin-top: 5px;
-        direction: ltr;
     }
 
     .info-list{
@@ -196,6 +194,15 @@ body{
         }
         .window-stats-active{
             background: rgb(42, 212, 190);
+        }
+    }
+
+    .button-type{
+        margin-left: 5px;
+        margin-top: 1px;
+
+        button{
+            border-radius: 20px;
         }
     }
 }

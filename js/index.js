@@ -152,3 +152,6 @@ function commafy( num ) {
     return str.join('.');
 }
 
+function resetbtn(){
+    infoWindow.close()
+}

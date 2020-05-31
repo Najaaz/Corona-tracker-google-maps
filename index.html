@@ -6,32 +6,40 @@
     <meta name="author" content="Najaaz Nabhan">
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <link rel="styleSheet" href="css/style.css">
+    <link rel="styleSheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="icon" href="https://i.pinimg.com/originals/f0/e1/8a/f0e18a5eec5f034b4bf92ea25ccc7d48.png">
     
     <title>Covid-19 tracker</title>
 </head>
 <body>
-    <h1 class="title">C<i class="fas fa-virus"></i>VID TRACKER</h1>
-    <div class="copyright-container">
-        <h5>&copy;Najaaz</h5>
-    </div>
+    <div class="cont">
+        <div>
+            <h1 class="title">C<i class="fas fa-virus"></i>VID TRACKER</h1>
+            <div class="copyright-container">
+                <h5>&copy;Najaaz</h5>
+            </div>
 
-    <div class="search-container">
-        <div class="search-bar">
-            <input type="text" name="search" placeholder="Enter country name" id="country-code">
-            <i class="fas fa-search" id="myBtn" onclick="searchCountry()"></i>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" name="search" placeholder="Enter country name" id="country-code">
+                    <i class="fas fa-search" id="myBtn" onclick="searchCountry()"></i>
+                </div>
+            </div>
+
+            <div class="country-container">
+                <div class="country-container-list">
+                    
+                </div>
+            </div>
+
+            <div class="button-type">
+                <button class="btn btn-sm btn-danger" onclick="resetbtn()">Reset</button>
+            </div>
         </div>
+
+
+        <div id = "map"></div>
     </div>
-
-    <div class="country-container">
-        <div class="country-container-list">
-            
-        </div>
-    </div>
-
-
-    <div id = "map"></div>
-
 
 <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYsw87jZsF8LJmftvhEJAVu8WtBU4O8C8&callback=initMap"></script>-->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh15L6ZQVrZVsMjwAhb_3-X6bbgpSGtQk&callback=initMap"></script>
