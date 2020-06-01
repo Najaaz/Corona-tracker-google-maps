@@ -99,7 +99,7 @@ function setContent(statistic){
                 </div>
             </div>
         </div>`
-
+        console.log(content)
         document.querySelector(".country-container-list").innerHTML = content
     })
 }
@@ -123,7 +123,7 @@ function searchCountry(){
 
     if (found){
         setContent(found)
-        
+        setContentListener()        
     }else{
         console.log("NOT FOUND")
     }
@@ -132,6 +132,7 @@ function searchCountry(){
 function setContentListener(){
     infoWindow.close()
     var selectedContent = document.querySelectorAll(".info")
+   
     selectedContent.forEach(function(elem,index){
         elem.addEventListener("click" , function(){
             google.maps.event.trigger(markers[index] , "click")

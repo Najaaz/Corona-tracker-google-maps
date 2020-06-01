@@ -32,13 +32,18 @@ body{
         display: flex;
         height: 100vh;
         width: 100%;
+        flex-grow: 2;
     }
 
     .title{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 50px;
-        margin-top: 40px;
+        top: 15px;
         color: rgba(17, 17, 17, 0.7);
+    }
+
+    .title-container{
+        height: 30vh;
     }
 
     .search-container{
@@ -77,10 +82,14 @@ body{
     .country-container{
         background-image: linear-gradient(to right , $light_green ,$light_green_transparent);
         width: 300px;
-        height: 60vh;
         border-radius: 30px;
-        bottom: 20px;  
-        overflow-y: scroll;     
+        overflow-y: scroll;
+        top: 180px;
+        bottom: 35px;
+        position: absolute;
+        /*height: 50vh;
+        flex-grow: 1;
+        clear: left;*/   
     }
 
     ::-webkit-scrollbar{
@@ -93,6 +102,7 @@ body{
     }
 
     .country-container-list{
+        display: grid;
         margin: 15px;
     }
 
@@ -200,6 +210,9 @@ body{
     .button-type{
         margin-left: 5px;
         margin-top: 1px;
+        position: absolute;
+        z-index: 5;
+        bottom: 1px;
 
         button{
             border-radius: 20px;

@@ -14,16 +14,20 @@
 <body>
     <div class="cont">
         <div>
-            <h1 class="title">COVID TRACKER</h1>
-            <div class="copyright-container">
-                <h5>&copy;Najaaz</h5>
+            <div class="title-container">
+                <h1 class="title">COVID TRACKER</h1>
+            
+                <div class="search-container">
+                    <form class="search-bar">
+                        <input type="text" name="search" placeholder="Enter country name" id="country-code" list="country">
+                        <i class="fas fa-search" id="myBtn" onclick="searchCountry()"></i>
+                    </form>
+                </div>
             </div>
 
-            <div class="search-container">
-                <form class="search-bar">
-                    <input type="text" name="search" placeholder="Enter country name" id="country-code" list="country">
-                    <i class="fas fa-search" id="myBtn" onclick="searchCountry()"></i>
-                </form>
+
+            <div class="copyright-container">
+                <h5>&copy;Najaaz</h5>
             </div>
 
             <div class="country-container">
