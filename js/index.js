@@ -19,7 +19,7 @@ function initMap() {
         }
     });
 
-    showMarkers()
+    showMarkers(statistics)
     setContent(statistics)
     setContentListener()
 }
@@ -57,8 +57,8 @@ function createMarker(latlng, name, death, countryCode, infected , recovered ,ac
     setContentListener()
 }
 
-function showMarkers(){
-    statistics.forEach(function(country){
+function showMarkers(statistic){
+    statistic.forEach(function(country){
         var latlng = new google.maps.LatLng(
             country.lat,
             country.lng,)
@@ -113,6 +113,7 @@ function searchCountry(){
             var country_name = country.country
             var country_uppper_name = country_name.toUpperCase()
             if (search_item == country_uppper_name){
+                clearLocations()
                 found.push(country)
             }
         })
@@ -123,6 +124,7 @@ function searchCountry(){
 
     if (found){
         setContent(found)
+        showMarkers(found)
         setContentListener()        
     }else{
         console.log("NOT FOUND")
@@ -154,7 +156,20 @@ function commafy( num ) {
 
 function resetbtn(){
     infoWindow.close()
-    setContent(statistics)
     var search_country = document.querySelector(".search-bar")
     search_country.reset()
+    clearLocations()
+    showMarkers(statistics)
+    setContent(statistics)
+    setContentListener()
+    
+}
+
+
+function clearLocations(){
+    infoWindow.close();
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
+    markers.length = 0;
 }
