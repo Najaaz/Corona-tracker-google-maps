@@ -242,12 +242,21 @@ body{
         height: 60vh;
         bottom: 2px;
     }
-
+    .title-container{
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+    }
     .title{
         position: absolute;
         z-index: 5;
-        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: rgb(119, 119, 119);
+        top: 52%;
+        flex-grow: 1;
         font-size: 30px;
+        background: rgba(245, 245, 245, 0.856);
+        border-radius: 10px;
     }
     .search-container{
         left: 4px;
@@ -262,7 +271,8 @@ body{
         background-image: linear-gradient(to right , $light_green ,$light_green_transparent);
         left: 4px;
         right: 4px;
-        height: 100px;
+        bottom: 35px;
+        height: 23vh;
         border-radius: 30px;
         overflow-y: scroll;
         position: absolute;  

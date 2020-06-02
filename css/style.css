@@ -262,11 +262,29 @@ body {
     height: 60vh;
     bottom: 2px;
   }
+  .title-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .title {
     position: absolute;
     z-index: 5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #777777;
+    top: 52%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     font-size: 30px;
+    background: rgba(245, 245, 245, 0.856);
+    border-radius: 10px;
   }
   .search-container {
     left: 4px;
@@ -281,7 +299,8 @@ body {
     background-image: linear-gradient(to right, #75bcff, rgba(116, 196, 250, 0.787));
     left: 4px;
     right: 4px;
-    height: 100px;
+    bottom: 35px;
+    height: 23vh;
     border-radius: 30px;
     overflow-y: scroll;
     position: absolute;
