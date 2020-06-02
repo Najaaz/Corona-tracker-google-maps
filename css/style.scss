@@ -262,6 +262,7 @@ body{
         left: 4px;
         right: 4px;
         height: 45px;
+        z-index: 50;
         background-color: $light_green_transparent;
         border-radius: 30px;
         margin-bottom: 10px;
@@ -272,7 +273,7 @@ body{
         left: 4px;
         right: 4px;
         bottom: 35px;
-        height: 23vh;
+        height: 25vh;
         border-radius: 30px;
         overflow-y: scroll;
         position: absolute;  
