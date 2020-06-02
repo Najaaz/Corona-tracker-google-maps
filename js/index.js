@@ -99,7 +99,6 @@ function setContent(statistic){
                 </div>
             </div>
         </div>`
-        console.log(content)
         document.querySelector(".country-container-list").innerHTML = content
     })
 }
@@ -156,8 +155,6 @@ function commafy( num ) {
 
 function resetbtn(){
     infoWindow.close()
-    var search_country = document.querySelector(".search-bar")
-    search_country.reset()
     clearLocations()
     showMarkers(statistics)
     setContent(statistics)
