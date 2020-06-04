@@ -60,7 +60,6 @@ function createMarker(latlng, name, death, countryCode, infected , recovered ,ac
 }
 
 function showCircles(statistic){
-    console.log("IM RECOGNIXED")
     statistic.forEach(function(country){
         // Add the circle for this city to the map.
         var coordinates = {lat: country.lat , lng: country.lng}
