@@ -21,6 +21,7 @@ function initMap() {
 
     showMarkers(statistics)
     setContent(statistics)
+    showCircles(statistics)
     setContentListener()
 }
 
@@ -54,7 +55,26 @@ function createMarker(latlng, name, death, countryCode, infected , recovered ,ac
     markers.push(marker);
 
     setContent(found)
+    showCircles(found)
     setContentListener()
+}
+
+function showCircles(statistic){
+    console.log("IM RECOGNIXED")
+    statistic.forEach(function(country){
+        // Add the circle for this city to the map.
+        var coordinates = {lat: country.lat , lng: country.lng}
+        new google.maps.Circle({
+          strokeColor: "#FF0000",
+          strokeOpacity: 0.8,
+          strokeWeight: 1.5,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35,
+          map: map,
+          center: coordinates,
+          radius: Math.sqrt(country.totalConfirmed) * 1000
+        });
+    })
 }
 
 function showMarkers(statistic){

@@ -9,4 +9,3 @@ literal_text = f"let statistics = {soup}"
 info_file = open("js/info.js" , "w")
 info_file.write(literal_text)
 info_file.close()
-print(literal_text)
